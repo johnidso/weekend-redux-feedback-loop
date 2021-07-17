@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { HashRouter as Router, Route} from "react-router-dom";
 import './App.css';
+import HowFeeling from '../HowFeeling/HowFeeling';
+import HowUnderstanding from '../HowUnderstanding/HowUnderstanding';
+import HowSupported from '../HowSupported/HowSupported';
 
 function App() {
 
@@ -14,13 +17,13 @@ function App() {
       </header>
       <Router>
         <Route path='/' exact>
-          {/* HowFeeling */}
+          <HowFeeling />
         </Route>
         <Route path='/understanding'>
-          {/* HowUnderstanding */}
+          <HowUnderstanding />
         </Route>
         <Route path='/supported'>
-          {/* HowSupported */}
+          <HowSupported />
         </Route>
         <Route path='/comments'>
           {/* Comments */}
