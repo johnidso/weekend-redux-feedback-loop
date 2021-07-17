@@ -5,7 +5,10 @@ import {useHistory} from 'react-router-dom';
 
 function HowFeeling () {
     const history=useHistory();
-    const handleSubmit = () => {
+    const dispatch = useDispatch();
+    const [rating, setRating] = useState('');
+    const handleSubmit = event => {
+        dispatch({type:'FEELINGS', payload:rating});
         history.push('/understanding')
     }
     return (
@@ -13,12 +16,12 @@ function HowFeeling () {
             <h2>How are you feeling today?</h2>
             <section id='feelingSubmit'>
                 <section className='ratingSection'>
-                    <button className='ratingButton'>1</button>
-                    <button className='ratingButton'>2</button>
-                    <button className='ratingButton'>3</button>
-                    <button className='ratingButton'>4</button>
-                    <button className='ratingButton'>5</button>
-                    <button className='ratingButton'>6</button>
+                    <button className='ratingButton' onClick= {setRating(1)}>1</button>
+                    <button className='ratingButton' onClick= {setRating(2)}>2</button>
+                    <button className='ratingButton' onClick= {setRating(3)}>3</button>
+                    <button className='ratingButton' onClick= {setRating(4)}>4</button>
+                    <button className='ratingButton' onClick= {setRating(5)}>5</button>
+                    <button className='ratingButton' onClick= {setRating(6)}>6</button>
                 </section>
                 <button type='submit' onClick={handleSubmit}>Next</button>
             </section>
