@@ -10,7 +10,7 @@ function HowSupported () {
         <>
             <h2>How well are you being supported?</h2>
             <section id='supportedSubmit'>
-                <input type='text' />
+                <input type='text' placeholder='your thoughts'/>
                 <button type='submit' onClick={handleSubmit}>Next</button>
             </section>
         </>

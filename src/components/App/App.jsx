@@ -6,6 +6,8 @@ import './App.css';
 import HowFeeling from '../HowFeeling/HowFeeling';
 import HowUnderstanding from '../HowUnderstanding/HowUnderstanding';
 import HowSupported from '../HowSupported/HowSupported';
+import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 
 function App() {
 
@@ -26,10 +28,10 @@ function App() {
           <HowSupported />
         </Route>
         <Route path='/comments'>
-          {/* Comments */}
+          <Comments />
         </Route>
         <Route path='/review'>
-          {/* Review */}
+          <Review />
         </Route>
         <Route path='/thankYou'>
           {/* ThankYou */}

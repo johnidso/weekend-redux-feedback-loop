@@ -10,7 +10,7 @@ function HowUnderstanding () {
         <>
             <h2>How well are you understanding the content?</h2>
             <section id='understandingSubmit'>
-                <input type='number' placeholder='enter number 1-6' />
+                <input type='text' placeholder='your thoughts' />
                 <button type='submit' onClick={handleSubmit}>Next</button>
             </section>
         </>
