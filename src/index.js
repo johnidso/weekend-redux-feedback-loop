@@ -4,24 +4,25 @@ import './index.css';
 import App from './components/App/App';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
 
 const feelings = (state=0, action) => {
-    if(action.type='FEELINGS'){
+    if(action.type==='FEELINGS'){
         return action.payload;
     }
     return state;
 }
 
 const understanding = (state=0, action) => {
-    if(action.type='UNDERSTANDING'){
+    if(action.type==='UNDERSTANDING'){
         return action.payload;
     }
     return state;
 }
 
 const support = (state=0, action) => {
-    if(action.type='SUPPORT'){
+    if(action.type==='SUPPORT'){
         return action.payload;
     }
     return state;
@@ -32,12 +33,13 @@ let storeInstance = createStore(
         feelings,
         understanding,
         support
-    })
+    }),
+    applyMiddleware(logger)
 )
 
 ReactDOM.render(
 <Provider store={storeInstance}>
-<App />
+    <App />
 </Provider>, 
 document.getElementById('root'));
 registerServiceWorker();
