@@ -16,7 +16,6 @@ function HowSupported () {
         <>
             <h2>How well are you being supported?</h2>
             <section id='supportedSubmit'>
-                <h3>{rating}</h3>
                 <section className='ratingSection'>
                     <button className='ratingButton' onClick= {() => setRating(1)}>1</button>
                     <button className='ratingButton' onClick= {() =>setRating(2)}>2</button>
@@ -25,8 +24,10 @@ function HowSupported () {
                     <button className='ratingButton' onClick= {() => setRating(5)}>5</button>
                     <button className='ratingButton' onClick= {() => setRating(6)}>6</button>
                 </section>
-                <button type='submit' onClick={handleSubmit}>Next</button>
-            </section>
+                <h3>{rating}</h3>
+                {rating && 
+                    <button type='submit' onClick={handleSubmit}>Next</button>
+                }            </section>
         </>
     )
 }

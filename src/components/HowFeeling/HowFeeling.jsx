@@ -16,7 +16,6 @@ function HowFeeling () {
         <>
             <h2>How are you feeling today?</h2>
             <section id='feelingSubmit'>
-                <h3>{rating}</h3>
                 <section className='ratingSection'>
                     <button className='ratingButton' onClick= {() => setRating(1)}>1</button>
                     <button className='ratingButton' onClick= {() =>setRating(2)}>2</button>
@@ -25,7 +24,10 @@ function HowFeeling () {
                     <button className='ratingButton' onClick= {() => setRating(5)}>5</button>
                     <button className='ratingButton' onClick= {() => setRating(6)}>6</button>
                 </section>
-                <button type='submit' onClick={handleSubmit}>Next</button>
+                <h3>{rating}</h3>
+                {rating && 
+                    <button type='submit' onClick={handleSubmit}>Next</button>
+                }
             </section>
         </>
     )

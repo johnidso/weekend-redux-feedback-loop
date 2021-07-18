@@ -16,7 +16,6 @@ function HowUnderstanding () {
         <>
             <h2>How well are you understanding the content?</h2>
             <section id='understandingSubmit'>
-                <h3>{rating}</h3>
                 <section className='ratingSection'>
                     <button className='ratingButton' onClick= {() => setRating(1)}>1</button>
                     <button className='ratingButton' onClick= {() =>setRating(2)}>2</button>
@@ -25,8 +24,11 @@ function HowUnderstanding () {
                     <button className='ratingButton' onClick= {() => setRating(5)}>5</button>
                     <button className='ratingButton' onClick= {() => setRating(6)}>6</button>
                 </section>
-                <button type='submit' onClick={handleSubmit}>Next</button>
-            </section>
+                <h3>{rating}</h3>
+                {rating && 
+                    <button type='submit' onClick={handleSubmit}>Next</button>
+                }            
+                </section>
         </>
     )
 }
