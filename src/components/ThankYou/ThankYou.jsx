@@ -7,7 +7,8 @@ function ThankYou () {
     }
     return(
     <>
-        <h2>Thank you for your feedback!</h2>
+        <h2>Thank you!</h2>
+        <p>Your feedback has been recorded.</p>
         <button onClick={handleClick}>Submit More Feedback</button>
     </>
     )

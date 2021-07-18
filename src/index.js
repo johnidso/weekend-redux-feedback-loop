@@ -47,7 +47,7 @@ let storeInstance = createStore(
         comment
     }),
     applyMiddleware(logger)
-)
+);
 
 ReactDOM.render(
 <Provider store={storeInstance}>
