@@ -16,14 +16,18 @@ function Comments () {
     return (
         <>
             <h2>Any comments you want to leave?</h2>
-            <section id='commentsSubmit'>
+            <section id='commentsInput'>
                 <input 
                     type='text' 
-                    placeholder='your thoughts'
+                    placeholder='enter your thoughts'
                     onChange = {event => setComment(event.target.value)} 
                 />
-                <button type='submit' onClick={handleSubmit}>Next</button>
             </section>
+                { comment ? 
+                    (<button type='submit' onClick={handleSubmit}>Next</button>) :
+                    (<p>Enter Feedback to Continue</p>)
+                }
+            
         </>
     )
 }
