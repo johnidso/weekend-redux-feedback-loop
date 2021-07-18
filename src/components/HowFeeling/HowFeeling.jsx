@@ -27,8 +27,9 @@ function HowFeeling () {
                 </section>
                 
                 <h3>{rating}</h3>
-                {rating && 
-                    <button type='submit' onClick={handleSubmit}>Next</button>
+                {rating ? 
+                    (<button type='submit' onClick={handleSubmit}>Next</button>) :
+                    (<p>Please select a response to continue.</p>)
                 }
             </section>
         </>
