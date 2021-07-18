@@ -8,6 +8,7 @@ import HowUnderstanding from '../HowUnderstanding/HowUnderstanding';
 import HowSupported from '../HowSupported/HowSupported';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
 
 function App() {
 
@@ -34,7 +35,7 @@ function App() {
           <Review />
         </Route>
         <Route path='/thankYou'>
-          {/* ThankYou */}
+          <ThankYou />
         </Route>
       </Router>
     </div>
