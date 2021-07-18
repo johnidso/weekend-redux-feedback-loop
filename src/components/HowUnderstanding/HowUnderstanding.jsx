@@ -13,11 +13,16 @@ function HowUnderstanding () {
         setRating('');
         history.push('/supported')
     }
+    const handleBack = event => {
+        event.preventDefault();
+        history.push('/')
+    }
     return (
         <>
             <h2>How well are you understanding the content?</h2>
             <section id='understandingSubmit'>
                 <section className='ratingSection'>
+                    <button className="back" onClick={handleBack}>Back</button>
                     <button className='ratingButton' onClick= {() => setRating(1)}>1</button>
                     <button className='ratingButton' onClick= {() =>setRating(2)}>2</button>
                     <button className='ratingButton' onClick= {() => setRating(3)}>3</button>

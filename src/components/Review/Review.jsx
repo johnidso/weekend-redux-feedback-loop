@@ -18,6 +18,10 @@ function Review () {
         })
         history.push('/thankYou')
     }
+    const handleBack = event => {
+        event.preventDefault();
+        history.push('/comments')
+    }
     return (
         <>
             <h2>Review Your Feedback</h2>
@@ -27,6 +31,7 @@ function Review () {
                 <p>Support: {feedback.support}</p>
                 <p>Comments: {feedback.comment}</p>
             </section>
+            <button className="back" onClick={handleBack}>Back</button>
             <button type='submit' onClick={handleSubmit}>Submit</button>
         </>
     )
