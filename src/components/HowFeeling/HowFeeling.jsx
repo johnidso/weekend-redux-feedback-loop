@@ -10,6 +10,7 @@ function HowFeeling () {
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({type:'FEELINGS', payload:rating});
+        setRating('');
         history.push('/understanding')
     }
     return (
@@ -24,10 +25,11 @@ function HowFeeling () {
                     <button className='ratingButton' onClick= {() => setRating(5)}>5</button>
                     <button className='ratingButton' onClick= {() => setRating(6)}>6</button>
                 </section>
+                
                 <h3>{rating}</h3>
-                {/* {rating && 
+                {rating && 
                     <button type='submit' onClick={handleSubmit}>Next</button>
-                } */}
+                }
             </section>
         </>
     )

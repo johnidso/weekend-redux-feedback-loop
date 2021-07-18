@@ -10,6 +10,7 @@ function HowUnderstanding () {
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({type:'UNDERSTANDING', payload:rating});
+        setRating('');
         history.push('/supported')
     }
     return (
@@ -28,7 +29,7 @@ function HowUnderstanding () {
                 {rating && 
                     <button type='submit' onClick={handleSubmit}>Next</button>
                 }            
-                </section>
+            </section>
         </>
     )
 }

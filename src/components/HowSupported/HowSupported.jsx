@@ -10,6 +10,7 @@ function HowSupported () {
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({type:'SUPPORT', payload:rating});
+        setRating('');
         history.push('/comments')
     }
     return (
@@ -24,10 +25,12 @@ function HowSupported () {
                     <button className='ratingButton' onClick= {() => setRating(5)}>5</button>
                     <button className='ratingButton' onClick= {() => setRating(6)}>6</button>
                 </section>
+                
                 <h3>{rating}</h3>
                 {rating && 
                     <button type='submit' onClick={handleSubmit}>Next</button>
-                }            </section>
+                }            
+            </section>
         </>
     )
 }
