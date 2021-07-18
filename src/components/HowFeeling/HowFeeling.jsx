@@ -7,6 +7,7 @@ function HowFeeling () {
     const history=useHistory();
     const dispatch = useDispatch();
     const [rating, setRating] = useState('');
+    // dispatch event for rating
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({type:'FEELINGS', payload:rating});
@@ -26,6 +27,7 @@ function HowFeeling () {
                     <button className='ratingButton' onClick= {() => setRating(6)}>6</button>
                 </section>
                 <h3>{rating}</h3>
+                {/* conditionally render Next if rating exists */}
                 {rating ? 
                     (<button type='submit' onClick={handleSubmit}>Next</button>) :
                     (<p>Please select a response to continue.</p>)

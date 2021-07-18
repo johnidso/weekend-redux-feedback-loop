@@ -7,6 +7,7 @@ function Comments () {
     const [comment, setComment] = useState('');
     const dispatch= useDispatch();
     const history=useHistory();
+    // dispatch event
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({type:'COMMENT', payload: comment})
@@ -28,6 +29,7 @@ function Comments () {
                     onChange = {event => setComment(event.target.value)} 
                 />
             </section>
+            {/* conditionally render Next if comment exists */}
             { comment ? 
                 (<button type='submit' onClick={handleSubmit}>Next</button>) :
                 (<p>Enter Feedback to Continue</p>)

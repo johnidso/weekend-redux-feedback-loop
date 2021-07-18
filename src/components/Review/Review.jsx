@@ -7,6 +7,7 @@ axios.post()
 function Review () {
     const history=useHistory();
     const feedback = useSelector(store => store);
+    // POST function for use onClick
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.post('/', feedback)
