@@ -2,7 +2,7 @@ import { useHistory } from "react-router";
 
 function ThankYou () {
     const history=useHistory();
-    const onClick = () => {
+    const handleClick = () => {
         history.push('/');
     }
     return(

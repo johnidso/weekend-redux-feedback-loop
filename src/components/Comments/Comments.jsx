@@ -1,7 +1,8 @@
-import {useHistory} from 'react-router-dom'
-import {useState} from 'react';
+import { useHistory } from 'react-router-dom'
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+// Component for comments, dispatches to reducer and moves user to Review on Submit
 function Comments () {
     const [comment, setComment] = useState('');
     const dispatch= useDispatch();

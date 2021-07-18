@@ -7,12 +7,14 @@ import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
 
+// REDUCERS //
 const feelings = (state=0, action) => {
     if(action.type==='FEELINGS'){
         return action.payload;
     }
     return state;
 }
+
 
 const understanding = (state=0, action) => {
     if(action.type==='UNDERSTANDING'){
@@ -34,6 +36,8 @@ const comment = (state='', action) => {
     }
     return state;
 }
+
+// STORE // 
 
 let storeInstance = createStore(
     combineReducers({

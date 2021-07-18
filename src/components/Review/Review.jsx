@@ -1,12 +1,20 @@
+import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-
+axios.post()
 
 function Review () {
     const history=useHistory();
     const feedback = useSelector(store => store);
     const handleSubmit = () => {
+        axios.post('/', feedback)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.log('Could not POST feedback to db', err);
+        })
         history.push('/thankYou')
     }
     return (

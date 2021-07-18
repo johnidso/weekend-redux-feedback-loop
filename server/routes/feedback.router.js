@@ -8,7 +8,7 @@ router.post('/', (req,res) => {
     INSERT INTO feedback (feeling, understanding, support, comments)
     VALUES ($1, $2, $3, $4);
     `;
-    pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comment])
+    pool.query(queryText, [newFeedback.feelings, newFeedback.understanding, newFeedback.support, newFeedback.comment])
     .then( dbResponse => {
         res.sendStatus(201);
     })
@@ -31,3 +31,5 @@ router.get('/', (req, res) => {
         res.sendStatus(500);
     });
 });
+
+module.exports = router;

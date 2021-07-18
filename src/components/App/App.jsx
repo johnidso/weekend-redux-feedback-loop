@@ -1,6 +1,4 @@
 import React, {useEffect} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
 import { HashRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import HowFeeling from '../HowFeeling/HowFeeling';
