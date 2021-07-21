@@ -2,8 +2,6 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-axios.post()
-
 function Review () {
     const history=useHistory();
     const feedback = useSelector(store => store);
